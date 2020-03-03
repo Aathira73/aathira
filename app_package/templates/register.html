@@ -1,0 +1,37 @@
+{% extends "base1.html" %}
+{% block content %}
+<form action="{{url_for('register')}}" method="POST" novalidate>
+    {{form.hidden_tag()}}
+     <h2>Register</h2>
+    <fieldset>
+      <!--  <legend>Register</legend> -->
+        <p>
+        {{form.username.label}}{{form.username(size=32, autofocus=True)}}
+        {% for error in form.username.errors %}
+            <span style="color:red;">{{error}}</span>
+        {% endfor %}
+        </p>
+        
+        <p>
+        {{form.password.label}}{{form.password(size=32)}}
+        {% for error in form.password.errors %}
+            <span style="color:red;">{{error}}</span>
+        {% endfor %}
+        </p>
+        
+         <p>
+        {{form.password2.label}}{{form.password2(size=30)}}
+        {% for error in form.password2.errors %}
+            <span style="color:red;">{{error}}</span>
+        {% endfor %}
+        </p>
+        
+        <p><span style="margin-left:200px;">{{form.submit()}}</span></p>
+        
+      </fieldset>
+      
+      
+      </form>
+   {% endblock %}     
+            
+                

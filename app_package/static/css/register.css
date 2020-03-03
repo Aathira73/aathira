@@ -1,0 +1,16 @@
+body{
+     width:40%;
+     margin-left:auto;
+     margin-right:auto;
+    
+     background-color:#FFE4E1;
+     }
+     
+fieldset{
+    background-color:#DB7093;
+    border: 3px solid black;
+    }     
+    
+h2{
+  text-align:center;
+  }    

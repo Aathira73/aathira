@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="" method="POST" novalidate>
+    {{form.hidden_tag()}}
+    <fieldset>
+    <legend>Balance</legend>
+    <p>
+    {{form.accountnumber.label}}{{form.accountnumber(size=32,autofocus=True)}}
+    {% for error in form.accountnumber.errors %}
+        <span style="color:red;">{{error}}</span>
+    {% endfor %}  
+    </p>  
+    
+   
+   
+    
+    <p>{{form.submit()}}</p>
+    </fieldset>
+    
+  </form>
+{% endblock %}  

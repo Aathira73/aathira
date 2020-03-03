@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="" method="POST" novalidate>
+    {{form.hidden_tag()}}
+    <fieldset>
+    <legend>Withdraw Account</legend>
+    <p>
+    {{form.accountnumber.label}}{{form.accountnumber(size=32,autofocus=True)}}
+    {% for error in form.accountnumber.errors %}
+        <span style="color:red;">{{error}}</span>
+    {% endfor %}  
+    </p>  
+    
+   
+    <p>
+    {{form.balance.label}}{{form.balance(size=32)}}
+    {% for error in form.balance.errors %}
+        <span style="color:red;">{{error}}</span>
+    {% endfor %} 
+    </p>
+    
+    <p>{{form.submit()}}</p>
+    </fieldset>
+    
+  </form>
+{% endblock %}  
